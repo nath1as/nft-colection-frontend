@@ -6,8 +6,6 @@ import myEpicNft from './utils/MyEpicNFT.json';
 
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = '';
-const TOTAL_MINT_COUNT = 50;
 
 // I moved the contract address to the top for easy access.
 const CONTRACT_ADDRESS = "0xC892756aA6aFE3C5ce625dF03FB9dE32a0C60152";
@@ -130,7 +128,7 @@ const App = () => {
 
   useEffect(() => {
     checkIfWalletIsConnected();
-  }, [])
+  }, [checkIfWalletIsConnected])
 
   const renderNotConnectedContainer = () => (
     <button onClick={connectWallet} className="cta-button connect-wallet-button">
